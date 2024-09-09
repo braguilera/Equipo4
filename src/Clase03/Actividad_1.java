@@ -5,23 +5,23 @@ import java.util.ArrayList;
 public class Actividad_1 {
 
     public static void main(String[] args) {
-        ArrayList<Cliente> clientes = new ArrayList<>();
-        clientes.add(new Cliente(1,"Agus",1.1));
-        clientes.add(new Cliente(2,"Braian",1.2));
-        clientes.add(new Cliente(3,"Juli",2.3));
-        clientes.add(new Cliente(4,"Pepe",1.9));
+        ArrayList<Clientes> clientes = new ArrayList<>();
+        clientes.add(new Clientes(1,"Agus",1.1));
+        clientes.add(new Clientes(2,"Braian",1.2));
+        clientes.add(new Clientes(3,"Juli",2.3));
+        clientes.add(new Clientes(4,"Pepe",1.9));
         System.out.println("Scoring máximo "+scoringMaximo(clientes));
     }
 
-    private static Cliente scoringMaximo(ArrayList<Cliente> clientes) {
+    private static Clientes scoringMaximo(ArrayList<Clientes> clientes) {
         return scoringMaximo(clientes,0,clientes.size());
     }
 
-    private static Cliente scoringMaximo(ArrayList<Cliente> clientes, int i, int f){
+    private static Clientes scoringMaximo(ArrayList<Clientes> clientes, int i, int f){
         if(i==f-1)return clientes.get(i);
         int mitad= (f+i)/2;
-        Cliente izq = scoringMaximo(clientes,i,mitad);
-        Cliente der = scoringMaximo(clientes,mitad,f);
+        Clientes izq = scoringMaximo(clientes,i,mitad);
+        Clientes der = scoringMaximo(clientes,mitad,f);
         return izq.getScoring()>der.getScoring()?izq:der;
     }
 }
@@ -67,3 +67,4 @@ class Cliente {
     }
 }
 
+//f(n)=O(n)
