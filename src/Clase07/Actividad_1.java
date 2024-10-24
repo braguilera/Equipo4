@@ -47,10 +47,10 @@ public class Actividad_1 {
     public static void main(String[] args) {
         FloydWarshall fw = new FloydWarshall();
         int graph[][] = {
-                {0, 2, INF, 5},
-                {INF, 0, INF, 4},
+                {0, 4, 7, INF},
+                {INF, 0, INF, 1},
                 {INF, INF, 0, INF},
-                {INF, INF, 2, 0}
+                {INF, INF, 1, 0}
         };
         int V = graph.length;
         fw.floydWarshall(graph, V);

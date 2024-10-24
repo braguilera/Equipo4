@@ -69,10 +69,10 @@ public class Actividad_2 {
         FloydWarshall fw = new FloydWarshall();
         // Matriz de adyacencia con tiempos de viaje (positivos y negativos)
         int graph[][] = {
-                {0, 2, INF, -5},
-                {INF, 0, INF, 4},
-                {INF, INF, 0, INF},
-                {INF, INF, 2, 0}
+                {0, 4, 7, INF},
+                {INF, 0, INF, 1},
+                {-8, INF, 0, INF},
+                {INF, INF, 1, 0}
         };
         int V = graph.length;
         fw.floydWarshall(graph, V);
